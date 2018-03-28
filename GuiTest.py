@@ -1,30 +1,11 @@
 from tkinter import *
+from tkinter import messagebox
 
-root = Tk()
-root.title("Note Taker")
+top = TK()
+top.geometry("100x100")
+def helloCallBack():
+    msg = messagebox.showinfo( "Hello Python", "Hello World")
 
-root.mainloop()
-
-button1 = Button(root, text="button1", command = Button1)
-button2 = Button(root, text="button2", command = Button2)
-button3 = Button(root, text="button3", command = Button3)
-
-text = Entry(root)
-listbox = Listbox(root)
-
-text.pack()
-button1.pack()
-button2.pack()
-button3.pack()
-listbox.pack()
-
-def Button1():
-    listbox.insert(END, "button1 pressed")
-
-def Button2():
-    listbox.insert(END, "button2 pressed")
-
-def Button3():
-    text_contents = text.get()
-    listbox.insert(END, text_contents)
-    text.delete(0, END)
+B = Button(top, text = "Hello", command = helloCallBack)
+B.place(x=50,y=50)
+top.mainloop()
