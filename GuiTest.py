@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 
-top = TK()
+top = Tk()
 top.geometry("100x100")
 def helloCallBack():
     msg = messagebox.showinfo( "Hello Python", "Hello World")
