@@ -1,11 +1,17 @@
-from tkinter import *
-from tkinter import messagebox
+import tkinter as tk
 
-top = Tk()
-top.geometry("100x100")
-def helloCallBack():
-    msg = messagebox.showinfo( "Hello Python", "Hello World")
+root = tk.Tk()
+logo = tk.PhotoImage(file="giphy.gif")
 
-B = Button(top, text = "Hello", command = helloCallBack)
-B.place(x=50,y=50)
-top.mainloop()
+w1 = tk.Label(root, image=logo).pack(side="right")
+
+explanation = """At present, only GIF and PPM/PGM
+formats are supported, but an interface
+exists to allow additional image file
+formats to be added easily."""
+
+w2 = tk.Label(root,
+              justify=tk.LEFT,
+              padx = 10,
+              text=explanation).pack(side="left")
+root.mainloop()
