@@ -1,8 +1,11 @@
-#!/usr/bin/python3
- import tkinter import *
+from tkinter import *
 
- class Window(Frame):
+class Window(Frame):
 
-     def __init__(self, master=None):
-         Frame.__init__(self, master)
-         self.master = master
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.master = master
+
+root = Tk()
+app = Window(root)
+root.mainloop()
